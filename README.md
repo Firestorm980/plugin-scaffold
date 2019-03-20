@@ -17,9 +17,24 @@ At 10up, we strive to provide digital products that yield a top-notch user exper
 ### Quick Start
 Install 10up's command line tool for scaffolding new projects. You can download it from the [Project Scaffold repository](https://github.com/10up/project-scaffold). Setting up a new plugin is as easy as running `create-10up plugin plugin-name-here` in the terminal!
 
+Browsersync requires a local development URL. This is currently set in the `package.json`, as `proxyUrl`.
+
 ### Direct Install
 - Clone the repository
 - Rename folder plugin-scaffold -> your project's name
+- If copying files manually to an existing plugin directory instead of cloning directly from the repository, make sure to include the following files which may be hidden:
+
+```
+.babelrc
+.browserslistrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+```
+
+The NPM commands will fail without these files present.
+
 - Do case-sensitive search/replace for the following:
 
 	- TenUpScaffold
@@ -38,7 +53,7 @@ Install 10up's command line tool for scaffolding new projects. You can download 
 
 `npm run build` (build all front-end files)
 
-`npm run deploy` (build all front-end files for deploy)
+`npm run build-release` (build all front-end files for release)
 
 ## Composer Commands
 
@@ -63,6 +78,7 @@ We don't know everything! We welcome pull requests and spirited, but respectful,
 - [Babel loader](https://www.npmjs.com/package/babel-loader)
 - [Babel preset env](https://www.npmjs.com/package/babel-preset-env)
 - [Browserslist](https://www.npmjs.com/package/browserslist)
+- [Browsersync](https://browsersync.io/)
 - [Can I Use DB](https://www.npmjs.com/package/caniuse-db)
 - [Del](https://www.npmjs.com/package/del)
 - [Eslint](https://www.npmjs.com/package/eslint)
@@ -70,7 +86,6 @@ We don't know everything! We welcome pull requests and spirited, but respectful,
 - [Gulp](https://www.npmjs.com/package/gulp)
 - [Gulp CSSNano](https://www.npmjs.com/package/gulp-cssnano)
 - [Gulp filter](https://www.npmjs.com/package/gulp-filter)
-- [Gulp Live Reload](https://www.npmjs.com/package/gulp-livereload)
 - [Gulp PostCSS](https://www.npmjs.com/package/gulp-postcss)
 - [Gulp Rename](https://www.npmjs.com/package/gulp-rename)
 - [Gulp Sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
